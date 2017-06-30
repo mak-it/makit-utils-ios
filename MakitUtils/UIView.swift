@@ -40,7 +40,7 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-    func addSubviewWithInsets(_ view: UIView, insets: UIEdgeInsets) {
+    public func addSubviewWithInsets(_ view: UIView, insets: UIEdgeInsets) {
         view.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(view)
         

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "MakitUtils"
-    s.version          = "1.0.1"
+    s.version          = "1.0.2"
     s.summary          = "Handy extensions for iOS project."
     s.license          = '(c) SIA "MAK IT"'
     s.author           = { "MAK IT" => "makit.lv" } 
