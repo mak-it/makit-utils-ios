@@ -39,4 +39,12 @@ extension UIView {
         gradientLayer.frame = self.bounds
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    func addSubviewWithInsets(_ view: UIView, insets: UIEdgeInsets) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(view)
+        
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(\(insets.top))-[view]-(\(insets.bottom))-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view" : view]))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(\(insets.left))-[view]-(\(insets.right))-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view" : view]))
+    }
 }
