@@ -10,7 +10,7 @@ import Foundation
 
 extension NSError {
     public static func newError(_ message: String, code: Int) -> NSError {
-        let dict: [AnyHashable: Any] = [NSLocalizedDescriptionKey: message]
+        let dict: [String: Any] = [NSLocalizedDescriptionKey: message]
         return NSError(domain: Bundle.main.bundleIdentifier!, code: code, userInfo: dict)
     }
 }
