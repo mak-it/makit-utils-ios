@@ -43,7 +43,7 @@ extension UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(view)
         
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(\(insets.top))-[view]-(\(insets.bottom))-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view" : view]))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(\(insets.left))-[view]-(\(insets.right))-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view" : view]))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(\(insets.top))-[view]-(\(insets.bottom))-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view" : view]))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(\(insets.left))-[view]-(\(insets.right))-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view" : view]))
     }
 }

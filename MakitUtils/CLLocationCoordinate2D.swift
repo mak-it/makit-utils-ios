@@ -20,7 +20,7 @@ extension CLLocationCoordinate2D {
                 } else {
                     
                     let placemark = placemarks?.first
-                    let components = [placemark?.thoroughfare, placemark?.subThoroughfare, placemark?.locality].flatMap{$0}
+                    let components = [placemark?.thoroughfare, placemark?.subThoroughfare, placemark?.locality].compactMap{$0}
                     let locationString = components.joined(separator: ", ")
                     observer.onNext(locationString)
                     observer.onCompleted()
